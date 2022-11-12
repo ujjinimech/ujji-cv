@@ -1,0 +1,25 @@
+body{
+  background-color: #DFD3C3;
+  /* color: white; */
+}
+hr{
+  border-style: none;
+  border-top-style: dotted;
+  border-color: grey;
+  /* height: 10px; */
+  width: 50px;
+  border-width: 5px;
+  /* margin: 10px; */
+/* padding: 20px; */
+/*  */
+}
+
+h3{
+  color: #3A3845;
+}
+h1{
+  color: darkslategray;
+}
+li{
+  width: 250px;
+}
