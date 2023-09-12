@@ -29,12 +29,12 @@ jobs:
     - name: push to gcr
       uses: raccoondev/push-docker-gcr@v1
       with:
-        gcr_host: us-central1-docker.pkg.dev/$GOOGLE_PROJECT/my-practice/
+        gcr_host: us-central1-docker.pkg.dev/$GOOGLE_PROJECT_ID/my-practice/
         image_name: my-cv
         image_tag: latest
       env:
-           GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_AUTH }}
-           GOOGLE_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT }}
+           GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
+           GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
 
 # jobs:
 #   deploy:
