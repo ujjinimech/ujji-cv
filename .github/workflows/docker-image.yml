@@ -24,13 +24,13 @@ jobs:
           password: ${{ secrets.GCLOUD_AUTH }}
           
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my_cv:latest
+      run: docker build . --file Dockerfile --tag us-central1-docker.pkg.dev/practice-398309/my-practice/my-cv:latest
       
     - name: push to gcr
       uses: raccoondev/push-docker-gcr@v1
       with:
-        gcr_host: us-central1-docker.pkg.dev/practice-398309/my-practice
-        image_name: my-cv
+        gcr_host: us-central1-docker.pkg.dev
+        image_name: us-central1-docker.pkg.dev/practice-398309/my-practice/my-cv
         image_tag: latest
       env:
            GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
