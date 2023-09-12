@@ -30,7 +30,7 @@ jobs:
       uses: raccoondev/push-docker-gcr@v1
       with:
         gcr_host: us-central1-docker.pkg.dev
-        image_name: us-central1-docker.pkg.dev/practice-398309/my-practice/my-cv
+        image_name: my-cv
         image_tag: latest
       env:
            GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
