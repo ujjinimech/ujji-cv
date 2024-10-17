@@ -56,7 +56,7 @@ deploy:
         gcloud auth configure-docker us-central1-docker.pkg.dev
         docker build -t us-central1-docker.pkg.dev/$GOOGLE_PROJECT/my-practice/my-cv:latest .
         docker push us-central1-docker.pkg.dev/$GOOGLE_PROJECT/my-practice/my-cv:latest
-  - name: deploy to gke
+    - name: deploy to gke
       env:
         GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
       run: |
